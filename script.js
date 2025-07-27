@@ -774,7 +774,7 @@ function findNearestBranch() {
           <strong>${nearest.branchName}</strong><br>
           📍 الوصف: ${nearest.mosqueName}<br>
           🏘️ الحي: ${nearest.neighborhood}<br><br>
-          <a href="${nearest.mapLink}" target="_blank">اضغط لفتح الموقع في خرائط Google</a>
+          <a href="${nearest.mapLink}" target="_blank">اضغط هنا للفتح في خرائط Google</a>
         `;
       }
     }, () => {
