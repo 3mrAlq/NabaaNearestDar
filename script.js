@@ -272,7 +272,7 @@ const branches = [
     {
   name: "جمعية نبأ لتحفيظ القرآن الكريم",
   branchName: "دار أم عمار",
-  mosqueName: "ملحقة بجامع الشيخ علي الظهر",
+  mosqueName: "ملحقة بجامع الشيخ علي ",
   neighborhood: "حي الرصراص ",
   lat: 18.252302,
   lng: 42.785931,
@@ -770,19 +770,42 @@ function findNearestBranch() {
 
       if (nearest) {
         document.getElementById("result").innerHTML = `
-           أقرب دارلك:<br>
+           أقرب دار لك هي:<br>
           <strong>${nearest.branchName}</strong><br>
           📍 الوصف: ${nearest.mosqueName}<br>
           🏘️ الحي: ${nearest.neighborhood}<br><br>
-          <a href="${nearest.mapLink}" target="_blank">اضغط لفتح https في خرائط Google</a>
+          <a href="${nearest.mapLink}" target="_blank">اضغط لفتح الموقع في خرائط Google</a>
         `;
       }
     }, () => {
-      alert("تعذر تحديد https. تأكد من تفعيل خدمة https.");
+      alert("تعذر تحديد الموقع. تأكد من تفعيل خدمة الموقع.");
     });
   } else {
-    alert("المتصفح لا يدعم تحديد https.");
+    alert("المتصفح لا يدعم تحديد الموقع.");
   }
 }
 
 document.getElementById("findBtn").addEventListener("click", findNearestBranch);  
+
+const nearestBranchDiv = document.getElementById("nearestBranch");
+nearestBranchDiv.innerHTML = `
+  <p>أقرب دار لك هي:</p>
+  <strong>${nearest.name}</strong><br>
+  📍 الوصف: ${nearest.description}<br>
+  🏡 الحي: ${nearest.area}
+`;
+
+// بعدها نعرض كل الفروع المرتبة حسب القرب
+const listDiv = document.getElementById("branchesList");
+listDiv.innerHTML = `<h3>جميع الدور مرتبة حسب القرب:</h3>`;
+distances.forEach(branch => {
+  const branchEl = document.createElement("div");
+  branchEl.classList.add("branch-card");
+  branchEl.innerHTML = `
+    <strong>${branch.name}</strong><br>
+    📍 الوصف: ${branch.description}<br>
+    🏘️ الحي: ${branch.area}<br>
+    📏 البعد: ${branch.distance.toFixed(2)} كم
+  `;
+  listDiv.appendChild(branchEl);
+});

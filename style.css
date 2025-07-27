@@ -113,3 +113,37 @@ button:hover::before {
   color: #2196F3;
   font-weight: bold;
 }
+
+.branches-list {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.branch-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffffff33;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.branch-item a {
+  color: #00ffff;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.branches-list {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px dashed #ccc;
+}
+
+.branch-card {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
