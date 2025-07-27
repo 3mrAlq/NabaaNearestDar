@@ -483,9 +483,8 @@ const branches = [
   neighborhood: "حي ذلالة الغربي",
   lat: 18.245070,
   lng: 42.747994,
-  distance: 0 // هذا الحقل نحدثه لاحقًا بناء على موقع المستخدم  
   mapLink: "https://maps.app.goo.gl/HjS1G61e1tUbZneB6"
-    
+  distance: 0 // هذا الحقل نحدثه لاحقًا بناء على موقع المستخدم  
 },
     {
   name: "جمعية نبأ لتحفيظ القرآن الكريم",
