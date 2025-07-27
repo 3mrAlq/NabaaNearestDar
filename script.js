@@ -484,7 +484,6 @@ const branches = [
   lat: 18.245070,
   lng: 42.747994,
   mapLink: "https://maps.app.goo.gl/HjS1G61e1tUbZneB6"
-  distance: 0 // هذا الحقل نحدثه لاحقًا بناء على موقع المستخدم  
 },
     {
   name: "جمعية نبأ لتحفيظ القرآن الكريم",
@@ -787,5 +786,3 @@ function findNearestBranch() {
 }
 
 document.getElementById("findBtn").addEventListener("click", findNearestBranch);  
-
-
